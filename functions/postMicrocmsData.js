@@ -8,6 +8,8 @@ exports.handler = async (event, context) => {
 
   const params = querystring.parse(event.body)
   console.log(params)
+  console.log(params.content)
+  console.log(event.queryStringParameters.content)
   const requestUrl = process.env.CMS_POST_URL;
   const dataResponse = await fetch(requestUrl, {
     method: "POST",
