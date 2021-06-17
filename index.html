@@ -18,7 +18,7 @@ const form = document.getElementById("contactForm")
 
 form.addEventListener("submit",async function(event){
   event.preventDefault()
-  await fetch("https://codegrid-2021-microcms-7.netlify.app/.netlify/functions/postMicrocmsData",{
+  await fetch(process.env.NETLIFY_FUNCTIONS_URL,{
     method:"POST",
     header:{
       "Content-Type":"application/json",
