@@ -6,7 +6,8 @@ exports.handler = async (event, context) => {
     return  { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const params = querystring.parse(event.body)
+  console.log(event.body.json())
+  const params = event.body.json()
   console.log(params)
   console.log(params.content)
   console.log(event.queryStringParameters.content)
