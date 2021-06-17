@@ -1,4 +1,4 @@
-const fetch = ('node-fetch');
+const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
   const requestUrl = process.env.CMS_POST_URL;
