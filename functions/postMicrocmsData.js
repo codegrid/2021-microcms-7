@@ -1,6 +1,6 @@
 exports.handler = async (event, context) => {
 	
-  const requestUrl = Process.env.CMS_POST_URL;
+  const requestUrl = process.env.CMS_POST_URL;
   const dataResponse = await fetch(requestUrl, {
     method: "POST",
     headers: {
