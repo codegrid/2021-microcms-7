@@ -1,5 +1,5 @@
+const fetch = require('node-fetch')
 exports.handler = async (event, context) => {
-	
   const requestUrl = process.env.CMS_POST_URL;
   const dataResponse = await fetch(requestUrl, {
     method: "POST",
