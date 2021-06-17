@@ -6,19 +6,26 @@
 </head>
 <body class="target">
   <h1>お問合せフォーム</h1>
-  <form name="contact" method="POST" onSubmit="">
+  <form id="contactForm">
     <label for="form-body" >内容</label>
-    <input id="form-body" name="body" type="text">
-    <button type="submit">送信</button>
+    <input id="form-body" name="form-body" type="text">
+    <input type="submit" value="送信"/>
   </form>
 </body>
 <script>
+const wordInput =document.getElementById('form-body') 
+const form = document.getElementById("contactForm")
 
-//const postContact = async (event) => {
-// event.preventDefault()
-//const target = document.getElementById('form-body')
-//await postMicrocmsData(target.value)
-//target.value = ""
-//}
+form.addEventListener("submit",async function(event){
+  event.preventDefault()
+  await fetch("https://codegrid-2021-microcms-7.netlify.app/.netlify/functions/postMicrocmsData",{
+    method:"POST",
+    header:{
+      "Content-Type":"application/json",
+    },
+    body:JSON.stringify({content:wordInput.value})
+  })  
+})
+
 </script>
 </html>
