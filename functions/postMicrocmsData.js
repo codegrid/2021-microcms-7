@@ -4,7 +4,7 @@ exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST") {
     return  { statusCode: 405, body: "Method Not Allowed" };
   }
-
+  console.log(event.body)
   const requestUrl = process.env.CMS_POST_URL;
 
   const dataResponse = await fetch(requestUrl, {
