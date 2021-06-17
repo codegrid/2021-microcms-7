@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/codegrid/2021-microcms-7#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1",
-    "querystring": "^0.2.1"
+    "node-fetch": "^2.6.1"
   }
 }
