@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   }
 
   const params = querystring.parse(event.body)
-
+  console.log(params)
   const requestUrl = process.env.CMS_POST_URL;
   const dataResponse = await fetch(requestUrl, {
     method: "POST",
