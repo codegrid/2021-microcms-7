@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/codegrid/2021-microcms-7/issues"
   },
-  "homepage": "https://github.com/codegrid/2021-microcms-7#readme",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  }
+  "homepage": "https://github.com/codegrid/2021-microcms-7#readme"
 }
