@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch");
 
 const headers = {
   "Access-Control-Allow-Origin": "*", //デプロイ後のサイトURLを指定する
