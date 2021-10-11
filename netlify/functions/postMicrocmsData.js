@@ -26,10 +26,10 @@ exports.handler = async (event, context) => {
   });
 
   // 結果を返す
-  const responceData = await dataResponse.json();
+  const responseData = await dataResponse.json();
   return {
     statusCode: 200,
-    body: JSON.stringify(responceData),
+    body: JSON.stringify(responseData),
     headers,
   };
-}
+};
